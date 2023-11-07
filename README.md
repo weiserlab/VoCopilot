@@ -37,4 +37,15 @@ This repository contains the code for both the embedded device, as well as the b
 
 ### Backend
 
-  
+1) `cd` to `backend` folder.
+2) Create an `.env` file, with parameters similar to that of `.env.example`.
+3) Start the pipenv shell with `pipenv shell` (Make sure you have pipenv installed)
+4) Install the dependencies with `pipenv install`.
+5) Ensure `ffmpeg` is installed. (e.g. with `brew install ffmpeg` on Mac OS). If there are errors with `whisper` or `ffmpeg`, try to run `brew reinstall tesseract`.
+6) Install `llama 2` via [ollama](https://ollama.ai/).
+7) Start the application via `python3 app/main.py`.
+8) Drop a wav or g722 file into `WATCH_FILES_PATH` and let the server pick up the file, transcrie and summarize it.
+
+### Benchmark
+
+1) To run the benchmark, run the command `python3 app/benchmark.py`.
